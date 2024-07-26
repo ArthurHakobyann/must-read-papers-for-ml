@@ -1,22 +1,7 @@
 # Must Read Papers for Data Science, ML, and DL
 ### Curated collection of Data Science, Machine Learning and Deep Learning papers, reviews and articles that are on must read list.
 
----
-
-> NOTE: :construction: in process of updating, let me know what additional papers, articles, blogs to add I will add them here. 
-
-### How to use  
-> :point_right: :star: this repo
-
-
-
-## Contributing
-- :point_right: :arrows_clockwise: Please feel free to [Submit Pull Request](https://github.com/hurshd0/must-read-papers-for-ml/pulls), if links are broken, or I am missing any important papers, blogs or articles.
-
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/hurshd0/must-read-papers-for-ml/graphs/commit-activity)
-
 ### :point_down: READ THIS :point_down:
-
 - :point_right: Reading paper with heavy math is hard, it takes time and effort to understand, most of it is dedication and motivation to not quit, don't be discouraged, read once, read twice, read thrice,... until it clicks and blows you away.
 
 
