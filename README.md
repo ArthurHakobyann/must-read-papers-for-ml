@@ -265,7 +265,7 @@ Neural Networks](https://papers.nips.cc/paper/4824-imagenet-classification-with-
 
 :1st_place_medal: :page_facing_up: [Visualizing and Understanding Recurrent Networks](https://arxiv.org/pdf/1506.02078.pdf)
 
-☑️☑️☑️☑️:star: :1st_place_medal: :page_facing_up: [Attention Is All You Need](https://arxiv.org/pdf/1706.03762) :star: ☑️☑️☑️☑️
+☑️☑️☑️☑️ :star: :1st_place_medal: :page_facing_up: [Attention Is All You Need](https://arxiv.org/pdf/1706.03762) :star: ☑️☑️☑️☑️
 
 :1st_place_medal: :page_facing_up: [An Empirical Exploration of Recurrent Network Architectures](http://proceedings.mlr.press/v37/jozefowicz15.pdf)
 
