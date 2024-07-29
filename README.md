@@ -38,7 +38,7 @@ generalization and model simplicity in machine learning](https://arxiv.org/pdf/1
 
 :1st_place_medal: :page_facing_up: [Model Evaluation, Model Selection, and Algorithm Selection in Machine Learning - by Sebastian Raschka](https://arxiv.org/pdf/1811.12808.pdf)
 
-:1st_place_medal: :page_facing_up: [A Brief Introduction into Machine Learning - by Gunnar Ratsch](https://events.ccc.de/congress/2004/fahrplan/files/105-machine-learning-paper.pdf)
+☑️☑️☑️☑️ :1st_place_medal: :page_facing_up: [A Brief Introduction into Machine Learning - by Gunnar Ratsch](https://events.ccc.de/congress/2004/fahrplan/files/105-machine-learning-paper.pdf) ☑️☑️☑️☑️
 
 :3rd_place_medal: :page_facing_up: [An Introduction to the Conjugate Gradient Method Without the Agonizing Pain - by Jonathan Richard Shewchuk](http://www.cs.cmu.edu/~quake-papers/painless-conjugate-gradient.pdf)
 
