@@ -139,7 +139,7 @@ generalization and model simplicity in machine learning](https://arxiv.org/pdf/1
 
 :star: :1st_place_medal: :newspaper: [The Matrix Calculus You Need For Deep Learning - Terence Parr and Jeremy Howard](https://arxiv.org/pdf/1802.01528.pdf) :star:
 
-:1st_place_medal: :newspaper: [Deep learning -Yann LeCun, Yoshua Bengio & Geoffrey Hinton](https://www.cs.toronto.edu/~hinton/absps/NatureDeepReview.pdf)
+☑️☑️☑️☑️ :1st_place_medal: :newspaper: [Deep learning -Yann LeCun, Yoshua Bengio & Geoffrey Hinton](https://www.cs.toronto.edu/~hinton/absps/NatureDeepReview.pdf) ☑️☑️☑️☑️
 
 :1st_place_medal: :page_facing_up: [Generalization in Deep Learning](https://arxiv.org/pdf/1710.05468.pdf)
 
