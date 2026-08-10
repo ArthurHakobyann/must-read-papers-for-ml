@@ -1,362 +1,303 @@
-# Must Read Papers for Data Science, ML, and DL
-### Curated collection of Data Science, Machine Learning and Deep Learning papers, reviews and articles that are on must read list.
+# Must-Read Papers for Machine Learning
 
-### :point_down: READ THIS :point_down:
-- :point_right: Reading paper with heavy math is hard, it takes time and effort to understand, most of it is dedication and motivation to not quit, don't be discouraged, read once, read twice, read thrice,... until it clicks and blows you away.
+A curated reading map for data science, machine learning, deep learning, and modern foundation models.
 
+The goal is not to list every famous paper. It is to keep a compact path through ideas that still shape practice: statistical thinking, optimization, tree models, neural networks, transformers, LLMs, retrieval, vision, recommenders, interpretability, and responsible ML.
 
-:1st_place_medal: - Read it first
+## How to use this list
 
-:2nd_place_medal: - Read it second 
+| Mark | Meaning |
+| --- | --- |
+| `- [ ]` | Not read yet. Change to `- [x]` when done. |
+| `Core` | Read this first. Foundational or unusually high leverage. |
+| `Deepen` | Read after the core papers in that area. |
+| `Classic` | Historically important; still useful context, but not always current practice. |
+| `Survey` | Good map of a subfield. |
+| `Modern` | Important post-2020 update. |
 
-:3rd_place_medal: - Read it third
+Tip: for each paper, write a one-line note in the `Notes` column after reading it. This keeps progress manual, portable, and GitHub-friendly.
 
----
+## Fast Tracks
 
-## Data Science
-
-### :bar_chart: Pre-processing & EDA
-
-:1st_place_medal: :page_facing_up:[Data preprocessing - Tidy data - by Hadley Wickham](https://vita.had.co.nz/papers/tidy-data.pdf)
-
-### :notebook: General DS
-
-:1st_place_medal: :page_facing_up: [Statistical Modeling: The Two Cultures - by Leo Breiman](https://projecteuclid.org/download/pdf_1/euclid.ss/1009213726)
-
-:2nd_place_medal: :page_facing_up: [A study in Rashomon curves and volumes: A new perspective on
-generalization and model simplicity in machine learning](https://arxiv.org/pdf/1908.01755.pdf)
-
-- :video_camera: [KDD 2019 Cynthia Rudin's Keynote](https://youtu.be/wL4X4lG20sM)
-
-:1st_place_medal: :page_facing_up: [Frequentism and Bayesianism: A Python-driven Primer by Jake VanderPlas](https://arxiv.org/pdf/1411.5018.pdf)
+| Goal | Suggested path |
+| --- | --- |
+| Data science foundations | Tidy Data -> Two Cultures -> Frequentism and Bayesianism -> Model Evaluation |
+| Classical ML practice | Model Evaluation -> XGBoost -> LightGBM -> Bayesian Optimization -> ICE plots |
+| Deep learning foundations | Deep Learning review -> Matrix Calculus -> Dropout -> BatchNorm -> Adam -> ResNet |
+| Modern NLP and LLMs | Attention -> BERT -> GPT-3 -> Scaling Laws -> Chinchilla -> InstructGPT -> RAG -> DPO |
+| Modern vision/generation | AlexNet -> ResNet -> ViT -> CLIP -> DDPM -> Latent Diffusion -> Segment Anything |
+| Recommender systems | Collaborative Filtering survey -> Netflix -> Amazon -> Deep recommender survey -> Explainable recommendation |
 
 ---
 
-## Machine Learning
+## Data Science and Statistical Thinking
 
-### :dart: General ML
+### Preprocessing and EDA
 
-:1st_place_medal: :page_facing_up: [Model Evaluation, Model Selection, and Algorithm Selection in Machine Learning - by Sebastian Raschka](https://arxiv.org/pdf/1811.12808.pdf)
+| Status | Priority | Paper | Why read it | Notes |
+| --- | --- | --- | --- | --- |
+| - [ ] | Core | [Tidy Data](https://vita.had.co.nz/papers/tidy-data.pdf) | A clean mental model for tabular data organization and reproducible analysis. |  |
 
-☑️☑️☑️☑️ :1st_place_medal: :page_facing_up: [A Brief Introduction into Machine Learning - by Gunnar Ratsch](https://events.ccc.de/congress/2004/fahrplan/files/105-machine-learning-paper.pdf) ☑️☑️☑️☑️
+### Modeling Culture and Uncertainty
 
-:3rd_place_medal: :page_facing_up: [An Introduction to the Conjugate Gradient Method Without the Agonizing Pain - by Jonathan Richard Shewchuk](http://www.cs.cmu.edu/~quake-papers/painless-conjugate-gradient.pdf)
+| Status | Priority | Paper | Why read it | Notes |
+| --- | --- | --- | --- | --- |
+| - [ ] | Core | [Statistical Modeling: The Two Cultures](https://projecteuclid.org/download/pdf_1/euclid.ss/1009213726) | Explains the split between data modeling and algorithmic modeling. Still one of the best framing papers for ML practitioners. |  |
+| - [ ] | Core | [Frequentism and Bayesianism: A Python-driven Primer](https://arxiv.org/pdf/1411.5018.pdf) | Practical introduction to two major statistical worldviews. |  |
+| - [ ] | Deepen | [A Study in Rashomon Curves and Volumes](https://arxiv.org/pdf/1908.01755.pdf) | Useful for thinking about model simplicity, multiplicity, and why many models can fit the same data well. |  |
 
-:3rd_place_medal: :page_facing_up: [On Model Stability as a Function of Random Seed](https://arxiv.org/pdf/1909.10447)
+### Model Evaluation
 
-### :mag: Outlier/Anomaly detection
-
-:1st_place_medal: :newspaper: [Outlier Detection : A Survey](https://pdfs.semanticscholar.org/912b/0b7879ca99bf654a26bbb0d50d4b8e0ed6c0.pdf)
-
-### :rocket: Boosting
-
-:2nd_place_medal: :page_facing_up: [XGBoost: A Scalable Tree Boosting System](https://arxiv.org/pdf/1603.02754.pdf)
-
-:2nd_place_medal: :page_facing_up: [LightGBM: A Highly Efficient Gradient BoostingDecision Tree](https://papers.nips.cc/paper/6907-lightgbm-a-highly-efficient-gradient-boosting-decision-tree.pdf)
-
-:2nd_place_medal: :page_facing_up: [AdaBoost and the Super Bowl of Classifiers - A Tutorial Introduction to Adaptive Boosting](http://www.inf.fu-berlin.de/inst/ag-ki/adaboost4.pdf)
-
-:3rd_place_medal: :page_facing_up: [Greedy Function Approximation: A Gradient Boosting Machine](https://projecteuclid.org/download/pdf_1/euclid.aos/1013203451)
-
-
-### :book: Unraveling Blackbox ML
-
-:3rd_place_medal: :page_facing_up: [Peeking Inside the Black Box: Visualizing Statistical Learning with Plots of Individual Conditional Expectation](https://arxiv.org/pdf/1309.6392.pdf)
-
-:3rd_place_medal: :page_facing_up: [Data Shapley: Equitable Valuation of Data for Machine Learning](https://arxiv.org/pdf/1904.02868.pdf)
-
-### :scissors: Dimensionality Reduction 
-
-:1st_place_medal: :page_facing_up: [A Tutorial on Principal Component Analysis](https://arxiv.org/pdf/1404.1100.pdf)
-
-:2nd_place_medal: :page_facing_up: [How to Use t-SNE Effectively](https://distill.pub/2016/misread-tsne/)
-
-:3rd_place_medal: :page_facing_up: [Visualizing Data using t-SNE](https://lvdmaaten.github.io/publications/papers/JMLR_2008.pdf)
-
-
-### :chart_with_upwards_trend: Optimization
-
-:1st_place_medal: :page_facing_up: [A Tutorial on Bayesian Optimization](https://arxiv.org/abs/1807.02811)
-
-:2nd_place_medal: :page_facing_up: [Taking the Human Out of the Loop: A review of Bayesian Optimization](https://www.cs.ox.ac.uk/people/nando.defreitas/publications/BayesOptLoop.pdf)
+| Status | Priority | Paper | Why read it | Notes |
+| --- | --- | --- | --- | --- |
+| - [ ] | Core | [Model Evaluation, Model Selection, and Algorithm Selection in Machine Learning](https://arxiv.org/pdf/1811.12808.pdf) | Strong practical guide to validation, selection, and evaluation traps. |  |
+| - [x] | Classic | [A Brief Introduction into Machine Learning](https://events.ccc.de/congress/2004/fahrplan/files/105-machine-learning-paper.pdf) | Good historical overview. Kept as read, but no longer the best first ML introduction. |  |
+| - [ ] | Deepen | [On Model Stability as a Function of Random Seed](https://arxiv.org/pdf/1909.10447) | Shows why single-run results can mislead. |  |
 
 ---
 
-### Famous Blogs
+## Classical Machine Learning
 
-[Sebastian Raschka](https://sebastianraschka.com/blog/index.html)
-[Chip Huyen](https://huyenchip.com/blog/)
+### Boosting and Tree Ensembles
 
----
+| Status | Priority | Paper | Why read it | Notes |
+| --- | --- | --- | --- | --- |
+| - [ ] | Core | [Greedy Function Approximation: A Gradient Boosting Machine](https://projecteuclid.org/download/pdf_1/euclid.aos/1013203451) | The conceptual foundation behind gradient boosting. |  |
+| - [ ] | Core | [XGBoost: A Scalable Tree Boosting System](https://arxiv.org/pdf/1603.02754.pdf) | Still central for tabular ML and production baselines. |  |
+| - [ ] | Core | [LightGBM: A Highly Efficient Gradient Boosting Decision Tree](https://papers.nips.cc/paper/6907-lightgbm-a-highly-efficient-gradient-boosting-decision-tree.pdf) | Explains speed and scale improvements used heavily in practice. |  |
+| - [ ] | Classic | [AdaBoost and the Super Bowl of Classifiers](http://www.inf.fu-berlin.de/inst/ag-ki/adaboost4.pdf) | Friendly tutorial on boosting before modern gradient boosted trees. |  |
 
-### :8ball: :crystal_ball: Recommenders
+### Dimensionality Reduction
 
-#### Surveys
+| Status | Priority | Paper | Why read it | Notes |
+| --- | --- | --- | --- | --- |
+| - [ ] | Core | [A Tutorial on Principal Component Analysis](https://arxiv.org/pdf/1404.1100.pdf) | PCA remains essential for data understanding and linear algebra intuition. |  |
+| - [ ] | Core | [How to Use t-SNE Effectively](https://distill.pub/2016/misread-tsne/) | Best practical explanation of t-SNE interpretation pitfalls. |  |
+| - [ ] | Deepen | [Visualizing Data using t-SNE](https://lvdmaaten.github.io/publications/papers/JMLR_2008.pdf) | Original method paper. |  |
 
-:1st_place_medal: :page_facing_up: [A Survey of Collaborative Filtering Techniques](http://downloads.hindawi.com/archive/2009/421425.pdf)
+### Optimization and Search
 
-:1st_place_medal: :page_facing_up: [Collaborative Filtering Recommender Systems](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.130.4520&rep=rep1&type=pdf)
+| Status | Priority | Paper | Why read it | Notes |
+| --- | --- | --- | --- | --- |
+| - [ ] | Core | [A Tutorial on Bayesian Optimization](https://arxiv.org/abs/1807.02811) | Practical starting point for expensive black-box optimization. |  |
+| - [ ] | Deepen | [Taking the Human Out of the Loop: A Review of Bayesian Optimization](https://www.cs.ox.ac.uk/people/nando.defreitas/publications/BayesOptLoop.pdf) | Broader survey of automated model search and experiment design. |  |
+| - [ ] | Deepen | [An Introduction to the Conjugate Gradient Method Without the Agonizing Pain](http://www.cs.cmu.edu/~quake-papers/painless-conjugate-gradient.pdf) | Excellent optimization math explainer. |  |
 
-:1st_place_medal: :page_facing_up: [Deep Learning Based Recommender System: A Survey and New Perspectives](https://sci-hub.tw/10.1145/3285029)
+### Anomaly Detection
 
-:1st_place_medal: :page_facing_up: :thinking: :star: [Explainable Recommendation: A Survey and New Perspectives](https://arxiv.org/abs/1804.11192) :star:
-
-#### Case Studies
-
-:2nd_place_medal: :page_facing_up: [The Netflix Recommender System: Algorithms, Business Value,and Innovation](http://delivery.acm.org/10.1145/2850000/2843948/a13-gomez-uribe.pdf)
-
-- :globe_with_meridians: Netflix Medium Blog
-  - [Netflix Recommendations: Beyond the 5 stars Part 1](https://medium.com/netflix-techblog/netflix-recommendations-beyond-the-5-stars-part-2-d9b96aa399f5)
-  - [Netflix Recommendations: Beyond the 5 stars Part 2](https://medium.com/netflix-techblog/netflix-recommendations-beyond-the-5-stars-part-2-d9b96aa399f5)
-
-:2nd_place_medal: :page_facing_up: [Two Decades of Recommender Systems at Amazon.com](https://pdfs.semanticscholar.org/0f06/d328f6deb44e5e67408e0c16a8c7356330d1.pdf)
-
-:2nd_place_medal: :globe_with_meridians: [How Does Spotify Know You So Well?](https://medium.com/s/story/spotifys-discover-weekly-how-machine-learning-finds-your-new-music-19a41ab76efe)
-
-:point_right: More In-Depth study, :closed_book: [Recommender Systems Handbook](https://www.amazon.com/Recommender-Systems-Handbook-Francesco-Ricci/dp/1489976361) 
-
----
-
-### Famous Deep Learning Blogs :cowboy_hat_face:
-
-:globe_with_meridians: [Stanford UFLDL Deep Learning Tutorial](http://ufldl.stanford.edu/tutorial/)
-
-:globe_with_meridians: [Distill.pub](https://distill.pub/)
-
-:globe_with_meridians: [Colah's Blog](http://colah.github.io/)
-
-:globe_with_meridians: [Andrej Karpathy](https://karpathy.github.io/)
-
-:globe_with_meridians: [Zack Lipton](http://zacklipton.com/articles/)
-
-:globe_with_meridians: [Sebastian Ruder](https://ruder.io/)
-
-:globe_with_meridians: [Jay Alammar](http://jalammar.github.io/)
+| Status | Priority | Paper | Why read it | Notes |
+| --- | --- | --- | --- | --- |
+| - [ ] | Survey | [Outlier Detection: A Survey](https://pdfs.semanticscholar.org/912b/0b7879ca99bf654a26bbb0d50d4b8e0ed6c0.pdf) | Kept as a broad classical overview. Pair with newer domain-specific papers when needed. |  |
 
 ---
 
-## :books: Neural Networks and Deep Learning Neural Networks
-
-:star: :1st_place_medal: :newspaper: [The Matrix Calculus You Need For Deep Learning - Terence Parr and Jeremy Howard](https://arxiv.org/pdf/1802.01528.pdf) :star:
-
-☑️☑️☑️☑️ :1st_place_medal: :newspaper: [Deep learning -Yann LeCun, Yoshua Bengio & Geoffrey Hinton](https://www.cs.toronto.edu/~hinton/absps/NatureDeepReview.pdf) ☑️☑️☑️☑️
-
-:1st_place_medal: :page_facing_up: [Generalization in Deep Learning](https://arxiv.org/pdf/1710.05468.pdf)
-
-:1st_place_medal: :page_facing_up: [Topology of Learning in Artificial Neural Networks](https://arxiv.org/pdf/1902.08160v1.pdf)
-
-:1st_place_medal: :page_facing_up: [Dropout: A Simple Way to Prevent Neural Networks from Overfitting](https://www.cs.toronto.edu/~hinton/absps/JMLRdropout.pdf)
-
-:2nd_place_medal: :page_facing_up: [Polynomial Regression As an Alternative to Neural Nets](https://arxiv.org/pdf/1806.06850)
-
-:2nd_place_medal: :globe_with_meridians: [The Neural Network Zoo](https://www.asimovinstitute.org/neural-network-zoo/?utm_source=mybridge&utm_medium=blog&utm_campaign=read_more)
-
-:2nd_place_medal: :globe_with_meridians: [Image Completion with Deep Learning in TensorFlow](http://bamos.github.io/2016/08/09/deep-completion/?utm_source=mybridge&utm_medium=blog&utm_campaign=read_more)
-
-:2nd_place_medal: :page_facing_up: [Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift](https://arxiv.org/pdf/1502.03167v3)
-
-:3rd_place_medal: :page_facing_up: [A systematic study of the class imbalance problem in convolutional neural networks](https://arxiv.org/pdf/1710.05381)
-
-:3rd_place_medal: :page_facing_up: [All Neural Networks are Created Equal](https://arxiv.org/pdf/1905.10854)
-
-:3rd_place_medal: :page_facing_up: [Adam: A Method for Stochastic Optimization](https://arxiv.org/pdf/1412.6980)
-
-:3rd_place_medal: :page_facing_up: [AutoML: A Survey of the State-of-the-Art](https://arxiv.org/pdf/1908.00709v1)
-
-### :framed_picture: CNNs
-
-:1st_place_medal: :page_facing_up: [Visualizing and Understanding Convolutional Networks -by Andrej Karpathy Justin Johnson Li Fei-Fei](https://arxiv.org/pdf/1311.2901.pdf)
-
-:2nd_place_medal: :page_facing_up: [Deep Residual Learning for Image Recognition](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf)
-
-:2nd_place_medal: :page_facing_up:[AlexNet-ImageNet Classification with Deep Convolutional
-Neural Networks](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf)
-
-:2nd_place_medal: :page_facing_up:[VGG Net-VERY DEEP CONVOLUTIONAL NETWORKS FOR LARGE-SCALE IMAGE RECOGNITION](https://arxiv.org/pdf/1409.1556v6.pdf)
-
-:3rd_place_medal: :page_facing_up: [A Mathematical Theory of Deep Convolutional Neural Networks for Feature Extraction](https://arxiv.org/pdf/1512.06293)
-
-:3rd_place_medal: :page_facing_up: [Large-scale Video Classification with Convolutional Neural Networks](https://www.cv-foundation.org/openaccess/content_cvpr_2014/papers/Karpathy_Large-scale_Video_Classification_2014_CVPR_paper.pdf)
-
-:3rd_place_medal: :page_facing_up: [Bottom-Up and Top-Down Attention for Image Captioning and Visual Question Answering](https://arxiv.org/pdf/1707.07998.pdf)
-
-### :black_circle: CapsNet :trident:	
-
-:1st_place_medal: :page_facing_up: [Dynamic Routing Between Capsules](https://arxiv.org/pdf/1710.09829.pdf)
-
-- Blog explaning, ["What are CapsNet, or Capsule Networks?"](https://medium.com/ai%C2%B3-theory-practice-business/understanding-hintons-capsule-networks-part-i-intuition-b4b559d1159b)
-
-- [Capsule Networks Tutorial by Aureline Geron](https://www.youtube.com/watch?v=pPN8d0E3900&t=1199s)
-
-###  :national_park: :speech_balloon: Image Captioning
-
-:1st_place_medal: :page_facing_up: [Show and Tell: A Neural Image Caption Generator](https://arxiv.org/abs/1411.4555)
-
-:2nd_place_medal: :page_facing_up: [Neural Machine Translation by Jointly Learning to Align and Translate](https://arxiv.org/pdf/1409.0473v7)
-
-:2nd_place_medal: :page_facing_up: [StyleNet: Generating Attractive Visual Captions with Styles](https://www.microsoft.com/en-us/research/uploads/prod/2017/06/Generating-Attractive-Visual-Captions-with-Styles)
-
-:2nd_place_medal: :page_facing_up: [Show, Attend and Tell: Neural Image Caption Generation with Visual Attention](https://arxiv.org/abs/1502.03044)
-
-:2nd_place_medal: :page_facing_up: [Where to put the Image in an Image Caption Generator](https://arxiv.org/abs/1703.09137)
-
-:2nd_place_medal: :page_facing_up: [Dank Learning: Generating Memes Using Deep Neural Networks](https://arxiv.org/abs/1806.04510)
-
-### :car: :walking_man: Object Detection :eagle: :football:
-
-:2nd_place_medal: :page_facing_up:[ResNet-Deep Residual Learning for Image Recognition](https://arxiv.org/pdf/1512.03385)
-
-:2nd_place_medal: :page_facing_up: [YOLO-You Only Look Once: Unified, Real-Time Object Detection](https://arxiv.org/pdf/1506.02640)
-
-:2nd_place_medal: :page_facing_up: [Microsoft COCO: Common Objects in Context](https://arxiv.org/pdf/1405.0312)
-
-- [COCO dataset](http://cocodataset.org/#home)
-
-:2nd_place_medal: :page_facing_up:  [(R-CNN) Rich feature hierarchies for accurate object detection and semantic segmentation](https://arxiv.org/pdf/1311.2524.pdf)
-
-:2nd_place_medal: :page_facing_up: [Fast R-CNN](https://arxiv.org/pdf/1504.08083.pdf)
-
-- :computer: [Papers with Code](https://www.paperswithcode.com/paper/fast-r-cnn)
-
-:2nd_place_medal: :page_facing_up: [Faster R-CNN](https://arxiv.org/pdf/1506.01497v3.pdf)
-
-- :computer: [Papers with Code](https://www.paperswithcode.com/paper/mask-r-cnn)
-
-:2nd_place_medal: :page_facing_up: [Mask R-CNN](https://arxiv.org/pdf/1703.06870.pdf)
-
-- :computer: [Papers with Code](https://www.paperswithcode.com/paper/mask-r-cnn)
-
-### :car: :walking_man: :couple: Pose Detection :runner: :dancer:
-
-:2nd_place_medal: :page_facing_up: [DensePose: Dense Human Pose Estimation In The Wild](https://arxiv.org/pdf/1802.00434v1.pdf)
-
-- :computer: [Papers with Code](https://www.paperswithcode.com/paper/densepose-dense-human-pose-estimation-in-the)
-
-:2nd_place_medal: :page_facing_up:  [Parsing R-CNN for Instance-Level Human Analysis](https://arxiv.org/pdf/1811.12596v1.pdf)
-
-- :computer: [Papers with Code](https://www.paperswithcode.com/paper/parsing-r-cnn-for-instance-level-human)
-
-### :abcd: :symbols: Deep NLP :currency_exchange: :1234:
-
-:1st_place_medal: :page_facing_up: [A Primer on Neural Network Models for Natural Language Processing](https://arxiv.org/pdf/1510.00726.pdf)
-
-:1st_place_medal: :page_facing_up: [Empirical Evaluation of Gated Recurrent Neural Networks on Sequence Modeling](https://arxiv.org/pdf/1412.3555.pdf)
-
-:1st_place_medal: :page_facing_up: [On the Properties of Neural Machine Translation: Encoder–Decoder Approaches](https://arxiv.org/pdf/1409.1259.pdf)
-
-:1st_place_medal: :page_facing_up: [LSTM: A Search Space Odyssey - by Klaus Greff et al.](https://arxiv.org/pdf/1503.04069.pdf)
-
-:1st_place_medal: :page_facing_up: [A Critical Review of Recurrent Neural Networksfor Sequence Learning](https://arxiv.org/pdf/1506.00019.pdf)
-
-:1st_place_medal: :page_facing_up: [Visualizing and Understanding Recurrent Networks](https://arxiv.org/pdf/1506.02078.pdf)
-
-☑️☑️☑️☑️ :star: :1st_place_medal: :page_facing_up: [Attention Is All You Need](https://arxiv.org/pdf/1706.03762) :star: ☑️☑️☑️☑️
-
-:1st_place_medal: :page_facing_up: [An Empirical Exploration of Recurrent Network Architectures](http://proceedings.mlr.press/v37/jozefowicz15.pdf)
-
-:1st_place_medal: :page_facing_up: [Open AI (GPT-2) Language Models are Unsupervised Multitask Learners](https://paperswithcode.com/paper/language-models-are-unsupervised-multitask)
-
-:1st_place_medal: :page_facing_up: [BERT: Pre-training of Deep Bidirectional Transformers forLanguage Understanding](https://arxiv.org/pdf/1810.04805)
-
-- [Google BERT Annoucement](https://ai.googleblog.com/2018/11/open-sourcing-bert-state-of-art-pre.html)
-
-:3rd_place_medal: :page_facing_up: [Parameter-Efficient Transfer Learning for NLP](https://arxiv.org/pdf/1902.00751)
-
-:3rd_place_medal: :page_facing_up: [A Sensitivity Analysis of (and Practitioners’ Guide to) ConvolutionalNeural Networks for Sentence Classification](https://arxiv.org/pdf/1510.03820v4.pdf)
-
-:3rd_place_medal: :page_facing_up: [A Survey on Recent Advances in Named Entity Recognition from Deep Learning models](https://arxiv.org/pdf/1910.11470v1)
-
-:3rd_place_medal: :page_facing_up: [Convolutional Neural Networks for Sentence Classification](https://arxiv.org/pdf/1408.5882v2)
-
-:3rd_place_medal: :page_facing_up: [Pervasive Attention: 2D Convolutional Neural Networks for Sequence-to-Sequence Prediction](https://arxiv.org/abs/1808.03867)
-
-:3rd_place_medal: :page_facing_up: [Single Headed Attention RNN: Stop Thinking With Your Head](https://arxiv.org/pdf/1911.11423.pdf)
-
-### :alien: GANs
-
-:1st_place_medal: :page_facing_up: [Generative Adversarial Nets - Goodfellow et al.](https://arxiv.org/pdf/1406.2661v1.pdf)
-
-:books: GAN Rabbit Hole -> [GAN Papers](https://github.com/zhangqianhui/AdversarialNetsPapers)
-
-### :o::heavy_minus_sign::o: GNNs (Graph Neural Networks)
-
-:3rd_place_medal: :page_facing_up: [A Comprehensive Survey on Graph Neural Networks](https://arxiv.org/pdf/1901.00596.pdf)
+## Interpretability, Data Value, and Responsible ML
+
+| Status | Priority | Paper | Why read it | Notes |
+| --- | --- | --- | --- | --- |
+| - [ ] | Core | [Peeking Inside the Black Box: Individual Conditional Expectation Plots](https://arxiv.org/pdf/1309.6392.pdf) | Practical interpretability technique that remains useful for tabular models. |  |
+| - [ ] | Core | [Data Shapley: Equitable Valuation of Data for Machine Learning](https://arxiv.org/pdf/1904.02868.pdf) | Important framing for data valuation and dataset contribution. |  |
+| - [ ] | Modern | [On the Opportunities and Risks of Foundation Models](https://arxiv.org/abs/2108.07258) | Defines the foundation-model framing and its technical/social risks. |  |
+
+Recommended talk: [Cynthia Rudin's KDD 2019 keynote](https://youtu.be/wL4X4lG20sM)
 
 ---
 
-### :man_health_worker: :syringe: Medical AI :pill: :microscope:
+## Deep Learning Foundations
 
-[Machine learning classifiers and fMRI: a tutorial overview - by Francisco et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2892746/pdf/nihms100405.pdf)
-
----
-
-## :point_down: Cool Stuff :point_down:
-
-:loud_sound: :page_facing_up: [SoundNet: Learning Sound
-Representations from Unlabeled Video](http://soundnet.csail.mit.edu/)
-
-:art: :page_facing_up: [CAN: Creative Adversarial NetworksGenerating “Art” by Learning About Styles andDeviating from Style Norms](https://arxiv.org/pdf/1706.07068)
-
-:art: :page_facing_up: [Deep Painterly Harmonization](https://arxiv.org/pdf/1804.03189)
-
-- [Github Code](https://github.com/luanfujun/deep-painterly-harmonization)
-
-:man_dancing: :dancer: :page_facing_up: [Everybody Dance Now](https://arxiv.org/pdf/1808.07371)
-
-- [Everybody Dance Now - Youtube Video](https://www.youtube.com/watch?v=PCBTZh41Ris)
-
-:soccer: [Soccer on Your Tabletop](https://arxiv.org/pdf/1806.00890)
-
-:blonde_woman: :haircut_woman: :page_facing_up: [SC-FEGAN: Face Editing Generative Adversarial Network with User's Sketch and Color](https://arxiv.org/abs/1902.06838)
-
-- [Github Code](https://github.com/run-youngjoo/SC-FEGAN)
-
-:camera_flash: :page_facing_up: [Handheld Mobile Photography in Very Low Light](https://arxiv.org/pdf/1910.11336v1)
-
-:japanese_castle: :mosque: :page_facing_up: [Learning Deep Features for Scene Recognitionusing Places Database](http://places.csail.mit.edu/places_NIPS14.pdf)
-
-:bullettrain_front: :bullettrain_side: :page_facing_up: [High-Speed Tracking withKernelized Correlation Filters](https://arxiv.org/pdf/1404.7584)
-
-:clapper: :page_facing_up: [Recent progress in semantic image segmentation](https://arxiv.org/ftp/arxiv/papers/1809/1809.10198)
-
-Rabbit hole -> :loud_sound: :globe_with_meridians: [Analytics Vidhya Top 10 Audio Processing Tasks and their papers](https://www.analyticsvidhya.com/blog/2018/01/10-audio-processing-projects-applications/)
-
-:blonde_man: -> :older_man: :page_facing_up: :page_facing_up: [Face Aging With Condintional GANS](https://arxiv.org/pdf/1702.01983)
-
-:blonde_man: -> :older_man: :page_facing_up: :page_facing_up: [Dual Conditional GANs for Face Aging and Rejuvenation](https://www.ijcai.org/proceedings/2018/0125.pdf)
-
-:balance_scale: :page_facing_up: [BAGAN: Data Augmentation with Balancing GAN](https://arxiv.org/pdf/1803.09655)
-
-[labml.ai Annotated PyTorch Paper Implementations](https://nn.labml.ai/)
+| Status | Priority | Paper | Why read it | Notes |
+| --- | --- | --- | --- | --- |
+| - [ ] | Core | [The Matrix Calculus You Need For Deep Learning](https://arxiv.org/pdf/1802.01528.pdf) | Makes backpropagation math much less mysterious. |  |
+| - [x] | Core | [Deep Learning](https://www.cs.toronto.edu/~hinton/absps/NatureDeepReview.pdf) | Classic LeCun, Bengio, and Hinton review. Still the best historical overview. |  |
+| - [ ] | Core | [Dropout: A Simple Way to Prevent Neural Networks from Overfitting](https://www.cs.toronto.edu/~hinton/absps/JMLRdropout.pdf) | Classic regularization paper. |  |
+| - [ ] | Core | [Batch Normalization](https://arxiv.org/pdf/1502.03167v3) | Foundational normalization paper. |  |
+| - [ ] | Core | [Adam: A Method for Stochastic Optimization](https://arxiv.org/pdf/1412.6980) | Still a default optimizer baseline and worth understanding. |  |
+| - [ ] | Deepen | [Generalization in Deep Learning](https://arxiv.org/pdf/1710.05468.pdf) | Useful theory context for why deep nets generalize. |  |
+| - [ ] | Deepen | [AutoML: A Survey of the State-of-the-Art](https://arxiv.org/pdf/1908.00709v1) | Good survey, but newer AutoML systems have evolved; treat as background. |  |
 
 ---
 
-## :newspaper: Cap Stone Projects :newspaper:
+## Transformers, NLP, and LLMs
 
-[8 Awesome Data Science Capstone Projects](https://www.analyticsvidhya.com/blog/2019/04/8-awesome-data-science-capstone-projects-from-praxis-business-school/)
+### Core Transformer Era
 
-[10 Powerful Applications of Linear Algebra in Data Science](https://www.analyticsvidhya.com/blog/2019/07/10-applications-linear-algebra-data-science/)
+| Status | Priority | Paper | Why read it | Notes |
+| --- | --- | --- | --- | --- |
+| - [x] | Core | [Attention Is All You Need](https://arxiv.org/pdf/1706.03762) | The transformer paper. Read before almost everything modern. |  |
+| - [ ] | Core | [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/pdf/1810.04805) | Key encoder-only pretraining paper. |  |
+| - [ ] | Classic | [A Primer on Neural Network Models for Natural Language Processing](https://arxiv.org/pdf/1510.00726.pdf) | Great pre-transformer neural NLP map. |  |
+| - [ ] | Classic | [LSTM: A Search Space Odyssey](https://arxiv.org/pdf/1503.04069.pdf) | Good if you want RNN/LSTM context before transformers. |  |
+| - [ ] | Classic | [Empirical Evaluation of Gated Recurrent Neural Networks on Sequence Modeling](https://arxiv.org/pdf/1412.3555.pdf) | Kept for historical sequence-model context. |  |
 
-[Top 5 Interesting Applications of GANs](https://www.analyticsvidhya.com/blog/2019/04/top-5-interesting-applications-gans-deep-learning/)
+### Modern LLMs and Alignment
 
-[Deep Learning Applications a beginner can build in minutes ](https://www.analyticsvidhya.com/blog/2017/02/5-deep-learning-applications-beginner-python/)
+| Status | Priority | Paper | Why read it | Notes |
+| --- | --- | --- | --- | --- |
+| - [ ] | Modern | [Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165) | GPT-3 paper; made prompting and few-shot use central. |  |
+| - [ ] | Modern | [Scaling Laws for Neural Language Models](https://arxiv.org/abs/2001.08361) | Explains empirical scaling behavior for LMs. |  |
+| - [ ] | Modern | [Training Compute-Optimal Large Language Models](https://arxiv.org/abs/2203.15556) | Chinchilla paper; corrected the field's intuition about model size versus tokens. |  |
+| - [ ] | Modern | [Training Language Models to Follow Instructions with Human Feedback](https://arxiv.org/abs/2203.02155) | InstructGPT/RLHF paper; key for assistant-style LLMs. |  |
+| - [ ] | Modern | [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903) | Foundational prompting paper for reasoning tasks. |  |
+| - [ ] | Modern | [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/abs/2005.11401) | Core RAG paper; important for factual, source-grounded generation. |  |
+| - [ ] | Modern | [LoRA: Low-Rank Adaptation of Large Language Models](https://arxiv.org/abs/2106.09685) | Efficient fine-tuning method used across modern LLM workflows. |  |
+| - [ ] | Modern | [QLoRA: Efficient Finetuning of Quantized LLMs](https://arxiv.org/abs/2305.14314) | Makes large-model fine-tuning feasible on much smaller hardware. |  |
+| - [ ] | Modern | [Direct Preference Optimization](https://arxiv.org/abs/2305.18290) | Simpler alternative to PPO-style RLHF for preference tuning. |  |
+| - [ ] | Modern | [Constitutional AI: Harmlessness from AI Feedback](https://arxiv.org/abs/2212.08073) | Important RLAIF/alignment paper. |  |
+| - [ ] | Modern | [LLaMA: Open and Efficient Foundation Language Models](https://arxiv.org/abs/2302.13971) | Important open-weights foundation-model milestone. |  |
+| - [ ] | Modern | [Mixtral of Experts](https://arxiv.org/abs/2401.04088) | Strong sparse mixture-of-experts reference. |  |
+| - [ ] | Modern | [Mamba: Linear-Time Sequence Modeling with Selective State Spaces](https://arxiv.org/abs/2312.00752) | Important non-transformer sequence-model direction for long contexts. |  |
 
 ---
 
-#### CHANGELOG
+## Computer Vision and Multimodal Learning
 
-2019-10-28 Started `must-read-papers-for-ml` repo
+### CNNs and Detection
 
-2019-10-29 Added analytics vidhya use case studies article links
+| Status | Priority | Paper | Why read it | Notes |
+| --- | --- | --- | --- | --- |
+| - [ ] | Core | [ImageNet Classification with Deep Convolutional Neural Networks](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf) | AlexNet; the modern deep vision turning point. |  |
+| - [ ] | Core | [Deep Residual Learning for Image Recognition](https://arxiv.org/pdf/1512.03385) | ResNet; still a core architecture idea. |  |
+| - [ ] | Deepen | [Very Deep Convolutional Networks for Large-Scale Image Recognition](https://arxiv.org/pdf/1409.1556v6.pdf) | VGG; useful architecture history. |  |
+| - [ ] | Classic | [R-CNN](https://arxiv.org/pdf/1311.2524.pdf) | Historical detection foundation. |  |
+| - [ ] | Classic | [Fast R-CNN](https://arxiv.org/pdf/1504.08083.pdf) | Detection pipeline improvement. |  |
+| - [ ] | Core | [Faster R-CNN](https://arxiv.org/pdf/1506.01497v3.pdf) | Still important for understanding two-stage detectors. |  |
+| - [ ] | Core | [Mask R-CNN](https://arxiv.org/pdf/1703.06870.pdf) | Key instance-segmentation model. |  |
+| - [ ] | Classic | [YOLO: You Only Look Once](https://arxiv.org/pdf/1506.02640) | One-stage detection milestone. |  |
+| - [ ] | Classic | [Microsoft COCO: Common Objects in Context](https://arxiv.org/pdf/1405.0312) | Dataset paper behind much of modern detection/segmentation evaluation. |  |
+| - [ ] | Modern | [End-to-End Object Detection with Transformers](https://arxiv.org/abs/2005.12872) | DETR; reframed detection as set prediction with transformers. |  |
 
-2019-10-30 Added Outlier/Anomaly detection paper, separated Boosting, CNN, Object Detection, NLP papers, and added Image captioning papers 
+### Vision Transformers, Multimodal Models, and Segmentation
 
-2019-10-31 Added Famous Blogs from Deep and Machine Learning Researchers
+| Status | Priority | Paper | Why read it | Notes |
+| --- | --- | --- | --- | --- |
+| - [ ] | Modern | [An Image is Worth 16x16 Words](https://arxiv.org/abs/2010.11929) | Vision Transformer paper; essential for modern vision. |  |
+| - [ ] | Modern | [Learning Transferable Visual Models From Natural Language Supervision](https://arxiv.org/abs/2103.00020) | CLIP; central for zero-shot vision and image-text models. |  |
+| - [ ] | Modern | [DINOv2: Learning Robust Visual Features without Supervision](https://arxiv.org/abs/2304.07193) | Strong modern self-supervised vision representation paper. |  |
+| - [ ] | Modern | [Segment Anything](https://arxiv.org/abs/2304.02643) | Promptable segmentation and a major vision foundation-model reference. |  |
 
-2019-11-1 Fixed markdown issues, added contribution guideline
+### Image Captioning and Vision-Language Classics
 
-2019-11-20 Added Recommender Surveys, and Papers
+| Status | Priority | Paper | Why read it | Notes |
+| --- | --- | --- | --- | --- |
+| - [ ] | Classic | [Show and Tell: A Neural Image Caption Generator](https://arxiv.org/abs/1411.4555) | Early neural captioning baseline. |  |
+| - [ ] | Classic | [Show, Attend and Tell](https://arxiv.org/abs/1502.03044) | Visual attention for captioning. |  |
+| - [ ] | Classic | [Neural Machine Translation by Jointly Learning to Align and Translate](https://arxiv.org/pdf/1409.0473v7) | Attention before transformers; still valuable context. |  |
 
-2019-12-12 Added R-CNN variants, PoseNets, GNNs
+---
 
-2020-02-23 Added GRU paper
+## Generative Models
+
+| Status | Priority | Paper | Why read it | Notes |
+| --- | --- | --- | --- | --- |
+| - [ ] | Core | [Generative Adversarial Nets](https://arxiv.org/pdf/1406.2661v1.pdf) | Original GAN paper. |  |
+| - [ ] | Modern | [Denoising Diffusion Probabilistic Models](https://arxiv.org/abs/2006.11239) | Core diffusion-model paper. |  |
+| - [ ] | Modern | [High-Resolution Image Synthesis with Latent Diffusion Models](https://arxiv.org/abs/2112.10752) | Latent diffusion; key text-to-image generation foundation. |  |
+
+Rabbit hole: [GAN Papers](https://github.com/zhangqianhui/AdversarialNetsPapers)
+
+---
+
+## Graph Neural Networks
+
+| Status | Priority | Paper | Why read it | Notes |
+| --- | --- | --- | --- | --- |
+| - [ ] | Survey | [A Comprehensive Survey on Graph Neural Networks](https://arxiv.org/pdf/1901.00596.pdf) | Broad GNN overview. Kept as a starting survey rather than a complete modern GNN path. |  |
+
+---
+
+## Recommender Systems
+
+### Surveys and Foundations
+
+| Status | Priority | Paper | Why read it | Notes |
+| --- | --- | --- | --- | --- |
+| - [ ] | Core | [A Survey of Collaborative Filtering Techniques](http://downloads.hindawi.com/archive/2009/421425.pdf) | Classical collaborative-filtering overview. |  |
+| - [ ] | Core | [Collaborative Filtering Recommender Systems](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.130.4520&rep=rep1&type=pdf) | Another strong classical recommender reference. |  |
+| - [ ] | Survey | [Deep Learning Based Recommender System: A Survey and New Perspectives](https://arxiv.org/abs/1707.07435) | Replaced the old Sci-Hub link with an arXiv-accessible version. |  |
+| - [ ] | Survey | [Explainable Recommendation: A Survey and New Perspectives](https://arxiv.org/abs/1804.11192) | Useful bridge between recommendation quality and interpretability. |  |
+
+### Industry Case Studies
+
+| Status | Priority | Paper / Article | Why read it | Notes |
+| --- | --- | --- | --- | --- |
+| - [ ] | Core | [The Netflix Recommender System](https://dl.acm.org/doi/10.1145/2843948) | Business and system view of recommendation at scale. |  |
+| - [ ] | Core | [Two Decades of Recommender Systems at Amazon.com](https://pdfs.semanticscholar.org/0f06/d328f6deb44e5e67408e0c16a8c7356330d1.pdf) | Classic Amazon case study. |  |
+| - [ ] | Deepen | [Netflix Recommendations: Beyond the 5 Stars](https://netflixtechblog.com/netflix-recommendations-beyond-the-5-stars-part-1-55838468f429) | More readable product/engineering context. |  |
+| - [ ] | Deepen | [How Does Spotify Know You So Well?](https://medium.com/s/story/spotifys-discover-weekly-how-machine-learning-finds-your-new-music-19a41ab76efe) | Product-facing recommender explanation. |  |
+
+Book: [Recommender Systems Handbook](https://www.amazon.com/Recommender-Systems-Handbook-Francesco-Ricci/dp/1489976361)
+
+---
+
+## Specialized and Applied Areas
+
+These are useful rabbit holes, but they are no longer part of the core first-pass reading path.
+
+| Area | Papers and resources |
+| --- | --- |
+| Medical AI | [Machine learning classifiers and fMRI: a tutorial overview](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2892746/pdf/nihms100405.pdf) |
+| Pose detection | [DensePose](https://arxiv.org/pdf/1802.00434v1.pdf), [Parsing R-CNN](https://arxiv.org/pdf/1811.12596v1.pdf) |
+| Creative AI | [Creative Adversarial Networks](https://arxiv.org/pdf/1706.07068), [Deep Painterly Harmonization](https://arxiv.org/pdf/1804.03189), [Everybody Dance Now](https://arxiv.org/pdf/1808.07371) |
+| Low-light photography | [Handheld Mobile Photography in Very Low Light](https://arxiv.org/pdf/1910.11336v1) |
+| Scene recognition | [Learning Deep Features for Scene Recognition using Places Database](http://places.csail.mit.edu/places_NIPS14.pdf) |
+| Tracking | [High-Speed Tracking with Kernelized Correlation Filters](https://arxiv.org/pdf/1404.7584) |
+| Audio | [SoundNet](http://soundnet.csail.mit.edu/) |
+| Implementations | [labml.ai Annotated PyTorch Paper Implementations](https://nn.labml.ai/) |
+
+---
+
+## Blogs and Learning Resources
+
+| Resource | Best for |
+| --- | --- |
+| [Distill](https://distill.pub/) | Visual explanations of ML concepts. |
+| [Colah's Blog](http://colah.github.io/) | Intuitive deep learning explanations. |
+| [Andrej Karpathy](https://karpathy.github.io/) | Neural networks, software, and ML craft. |
+| [Sebastian Raschka](https://sebastianraschka.com/blog/index.html) | Practical ML and deep learning. |
+| [Chip Huyen](https://huyenchip.com/blog/) | ML systems and production thinking. |
+| [Sebastian Ruder](https://ruder.io/) | NLP and transfer learning. |
+| [Jay Alammar](http://jalammar.github.io/) | Visual transformer/NLP explanations. |
+| [Stanford UFLDL Tutorial](http://ufldl.stanford.edu/tutorial/) | Older but useful deep learning basics. |
+
+---
+
+## Changes in This Refresh
+
+### Added because the field changed
+
+- Foundation models: [On the Opportunities and Risks of Foundation Models](https://arxiv.org/abs/2108.07258)
+- LLM scaling and training: [Scaling Laws](https://arxiv.org/abs/2001.08361), [Chinchilla](https://arxiv.org/abs/2203.15556), [GPT-3](https://arxiv.org/abs/2005.14165)
+- LLM behavior and adaptation: [InstructGPT](https://arxiv.org/abs/2203.02155), [Chain-of-Thought](https://arxiv.org/abs/2201.11903), [LoRA](https://arxiv.org/abs/2106.09685), [QLoRA](https://arxiv.org/abs/2305.14314), [DPO](https://arxiv.org/abs/2305.18290), [Constitutional AI](https://arxiv.org/abs/2212.08073)
+- Retrieval: [RAG](https://arxiv.org/abs/2005.11401)
+- Modern vision: [ViT](https://arxiv.org/abs/2010.11929), [CLIP](https://arxiv.org/abs/2103.00020), [DETR](https://arxiv.org/abs/2005.12872), [DINOv2](https://arxiv.org/abs/2304.07193), [Segment Anything](https://arxiv.org/abs/2304.02643)
+- Modern generative modeling: [DDPM](https://arxiv.org/abs/2006.11239), [Latent Diffusion](https://arxiv.org/abs/2112.10752)
+- New architecture directions: [Mamba](https://arxiv.org/abs/2312.00752), [Mixtral](https://arxiv.org/abs/2401.04088)
+
+### Demoted from core to classic/background
+
+- Many RNN, GRU, LSTM, CNN-for-sentence-classification, capsule-network, and early image-captioning papers are still historically useful, but transformers and foundation models are now the center of most modern NLP and multimodal practice.
+- Several older “cool stuff” application papers were moved into a specialized section so they do not distract from the main learning path.
+- The old GPT-2 Papers with Code link was replaced by GPT-3, scaling, instruction tuning, and preference-optimization papers because they better represent the current LLM era.
+
+### Link and maintenance cleanup
+
+- Replaced ad hoc repeated checkmarks with standard Markdown task boxes.
+- Replaced the recommender survey Sci-Hub link with a maintainable arXiv-style link.
+- Fixed several typos, duplicated links, and inconsistent formatting.
+- Converted long emoji-heavy lists into tables that are easier to scan and edit.
+
+---
+
+## Original Changelog
+
+| Date | Change |
+| --- | --- |
+| 2019-10-28 | Started `must-read-papers-for-ml` repo. |
+| 2019-10-29 | Added Analytics Vidhya use-case study links. |
+| 2019-10-30 | Added anomaly detection, boosting, CNN, object detection, NLP, and image-captioning papers. |
+| 2019-10-31 | Added famous ML/deep-learning blogs. |
+| 2019-11-01 | Fixed Markdown issues and added contribution guidance. |
+| 2019-11-20 | Added recommender surveys and papers. |
+| 2019-12-12 | Added R-CNN variants, pose papers, and GNNs. |
+| 2020-02-23 | Added GRU paper. |
+| 2026-08-10 | Refreshed curation, added modern foundation-model papers, and redesigned README with manual read tracking. |
